@@ -11,3 +11,4 @@ wheels/
 
 # Additional Ignores
 game_state.jsonl
+game_events.jsonl
