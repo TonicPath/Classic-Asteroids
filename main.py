@@ -33,7 +33,7 @@ def main():
 
     asteroids_killed = 0
     score = 0
-
+    font = pygame.font.Font(None, 36)
 
     while True:
         log_state()
@@ -59,6 +59,10 @@ def main():
         screen.fill((0,0,0))
         for object in drawable:
             object.draw(screen)
+        score_kept = font.render(f"Score: {score}",1, 'white')
+        text_rect = score_kept.get_rect()
+        text_rect.bottomleft = (10, SCREEN_HEIGHT - 10)
+        screen.blit(score_kept, text_rect)
         pygame.display.flip()
         dt = clock.tick(60)/1000
 
